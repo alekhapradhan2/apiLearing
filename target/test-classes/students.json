@@ -1,0 +1,15 @@
+{
+  "students": [
+		{
+			"id":"45",
+			"name":"Swarna",
+			"degree":"BCA",
+			"address":"jarada",
+			"coursed":[
+				"Hotel Management",
+				"Fashoin"
+			]
+			
+		}
+  ]
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="StudentsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="PageNumber" type="xs:int"/>
+                <xs:element name="PageSize" type="xs:int"/>
+                <xs:element name="TotalPages" type="xs:int"/>
+                <xs:element name="TotalRecords" type="xs:int"/>
+                <xs:element name="Students">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Student" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ID" type="xs:int"/>
+                                        <xs:element name="FirstName" type="xs:string"/>
+                                        <xs:element name="LastName" type="xs:string"/>
+                                        <xs:element name="Age" type="xs:int"/>
+                                        <xs:element name="Gender" type="xs:string"/>
+                                        <xs:element name="Email" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NextPageUrl" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

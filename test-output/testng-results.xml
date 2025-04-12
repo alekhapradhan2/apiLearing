@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-10T23:42:34 IST" name="Suite" finished-at="2025-03-10T23:42:43 IST" duration-ms="8851">
+    <groups>
+    </groups>
+    <test started-at="2025-03-10T23:42:34 IST" name="Creat User" finished-at="2025-03-10T23:42:37 IST" duration-ms="3815">
+      <class name="Day8.Createuser">
+        <test-method signature="test_createUser(org.testng.ITestContext)[pri:0, instance:Day8.Createuser@35ef1869]" started-at="2025-03-10T23:42:34 IST" name="test_createUser" finished-at="2025-03-10T23:42:37 IST" duration-ms="3777" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@24269709]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_createUser -->
+      </class> <!-- Day8.Createuser -->
+    </test> <!-- Creat User -->
+    <test started-at="2025-03-10T23:42:38 IST" name="Get The User" finished-at="2025-03-10T23:42:39 IST" duration-ms="1652">
+      <class name="Day8.GetUser">
+        <test-method signature="test_getuser(org.testng.ITestContext)[pri:0, instance:Day8.GetUser@12468a38]" started-at="2025-03-10T23:42:38 IST" name="test_getuser" finished-at="2025-03-10T23:42:39 IST" duration-ms="1651" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1a66be41]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_getuser -->
+      </class> <!-- Day8.GetUser -->
+    </test> <!-- Get The User -->
+    <test started-at="2025-03-10T23:42:39 IST" name="Update The User" finished-at="2025-03-10T23:42:41 IST" duration-ms="1668">
+      <class name="Day8.UpdateUser">
+        <test-method signature="test_Updateuser(org.testng.ITestContext)[pri:0, instance:Day8.UpdateUser@6572421]" started-at="2025-03-10T23:42:39 IST" name="test_Updateuser" finished-at="2025-03-10T23:42:41 IST" duration-ms="1668" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@653e7b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Updateuser -->
+      </class> <!-- Day8.UpdateUser -->
+    </test> <!-- Update The User -->
+    <test started-at="2025-03-10T23:42:41 IST" name="Delete The User" finished-at="2025-03-10T23:42:43 IST" duration-ms="1674">
+      <class name="Day8.DeleteUser">
+        <test-method signature="Test_Deleteuser(org.testng.ITestContext)[pri:0, instance:Day8.DeleteUser@515aebb0]" started-at="2025-03-10T23:42:41 IST" name="Test_Deleteuser" finished-at="2025-03-10T23:42:43 IST" duration-ms="1672" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4ac0fdc7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Deleteuser -->
+      </class> <!-- Day8.DeleteUser -->
+    </test> <!-- Delete The User -->
+  </suite> <!-- Suite -->
+</testng-results>
