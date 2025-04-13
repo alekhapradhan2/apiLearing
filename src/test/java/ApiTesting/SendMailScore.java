@@ -22,6 +22,7 @@ import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
 
 public class SendMailScore {
+	String url="https://www.cricbuzz.com/live-cricket-scores/104906/lions-vs-tit-final-csa-four-day-series-division-one-2024-25";
 	@Test
 	public void getTheScore() throws InterruptedException {
 		
