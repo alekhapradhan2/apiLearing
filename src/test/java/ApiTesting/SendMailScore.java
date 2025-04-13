@@ -58,7 +58,7 @@ public class SendMailScore {
 		Integer wicket=Integer.parseInt(wicketInString);
 		over++;
 		
-		while(over<=20 || wicket<=10)
+		while(over<=20 && wicket<=10)
 		{
 			
 //			score1=driver.findElement(By.xpath("//div[@ng-show='isMiniscoreRendered']//div[contains(@class,'cb-col-scores')]//div[@class='cb-min-bat-rw']//h2")).getText();
