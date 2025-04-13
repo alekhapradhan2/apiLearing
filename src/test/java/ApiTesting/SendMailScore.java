@@ -8,8 +8,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 import jakarta.mail.Authenticator;
@@ -22,23 +22,27 @@ import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
 
 public class SendMailScore {
-	String url="https://www.cricbuzz.com/live-cricket-scores/104906/lions-vs-tit-final-csa-four-day-series-division-one-2024-25";
+
+	
+	String url="https://www.cricbuzz.com/live-cricket-scores/115138/rr-vs-rcb-28th-match-indian-premier-league-2025";
+
 	@Test
 	public void getTheScore() throws InterruptedException {
 		
 		
+		System.setProperty("webdriver", "chromedriver.exe");
 		
-		 System.setProperty("webdriver", "chromedriver.exe");
-	       	 ChromeOptions options = new ChromeOptions();
-	    	 options.addArguments("--headless");
-	         WebDriver driver = new ChromeDriver(options);
-	         driver.manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
-	         driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);	 
-	 	 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	 	 driver.manage().window().maximize();
-	 	 driver.get(url); 
+        ChromeOptions options = new ChromeOptions();
+//      options.addArguments("--headless");
+        WebDriver driver = new ChromeDriver(options);
+	      driver.manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
+	      driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);	 
+	 	   driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	 	   driver.manage().window().maximize();
+	 	   driver.get(url); 
 		
 		String score1=driver.findElement(By.xpath("//div[@ng-show='isMiniscoreRendered']//div[contains(@class,'cb-col-scores')]//div[@class='cb-min-bat-rw']//h2")).getText();
+		System.out.println(score1);
 		String insideParentheses1= score1.replaceAll(".*\\((.*?)\\).*", "$1").split("\\.")[0];
 		
 		Integer over=Integer.parseInt(insideParentheses1);
@@ -47,8 +51,14 @@ public class SendMailScore {
 		while(over<=20)
 		{
 			
-			score1=driver.findElement(By.xpath("//div[@ng-show='isMiniscoreRendered']//div[contains(@class,'cb-col-scores')]//div[@class='cb-min-bat-rw']//h2")).getText();
-			insideParentheses1= score1.replaceAll(".*\\((.*?)\\).*", "$1").split("\\.")[0];
+//			score1=driver.findElement(By.xpath("//div[@ng-show='isMiniscoreRendered']//div[contains(@class,'cb-col-scores')]//div[@class='cb-min-bat-rw']//h2")).getText();
+			String scor2=driver.findElement(By.xpath("//div[@ng-show='isMiniscoreRendered']//div[contains(@class,'cb-col-scores')]//div[@class='cb-min-bat-rw']//h2")).getText();
+			if(!score1.equals(scor2))
+			{
+				System.out.println(scor2);
+				score1=driver.findElement(By.xpath("//div[@ng-show='isMiniscoreRendered']//div[contains(@class,'cb-col-scores')]//div[@class='cb-min-bat-rw']//h2")).getText();
+			}
+			insideParentheses1= scor2.replaceAll(".*\\((.*?)\\).*", "$1").split("\\.")[0];
 			if(insideParentheses1.equals(""+over+""))
 			{
 				score1=driver.findElement(By.xpath("//div[@ng-show='isMiniscoreRendered']//div[contains(@class,'cb-col-scores')]//div[@class='cb-min-bat-rw']//h2")).getText();
@@ -104,15 +114,21 @@ public class SendMailScore {
 		        for(String a:batToPrint)
 		        {
 		        	batPrint=batPrint+ "\n" +a;
+		        	
 		        }
 		        
 		        for(String a:ballToPrint)
 		        {
+
 		        	ballPrint=ballPrint+ "\n" +a;
+		        	
 		        }
 		        
 		        System.out.println(totalSc+ "\n" +"\n------ BATTING ------"+ "\n"+batPrint+"\n------ BOWLING ------"+ "\n" +ballPrint);
+		       
+		        
 		        StringBuilder htmlBody = new StringBuilder();
+		    
 
 		        htmlBody.append("<h2 style='color:#2E86C1;'>Match Score: ").append(totalSc).append("</h2>");
 
@@ -209,5 +225,6 @@ public class SendMailScore {
 	    }
 	}
 	
+
 
 }
