@@ -35,7 +35,7 @@ public class SendMailScore {
 		System.setProperty("webdriver", "chromedriver.exe");
 		
         ChromeOptions options = new ChromeOptions();
-     options.addArguments("--headless");
+//      options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
 	      driver.manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
 	      driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);	 
@@ -186,8 +186,7 @@ public class SendMailScore {
 		        SendMail(htmlBody.toString(), totalSc);
 		        wicket++;
 		        }
-	    		
-	    	}
+	    	
 			if(insideParentheses1.equals(""+over+""))
 			{
 				score1=driver.findElement(By.xpath("//div[@ng-show='isMiniscoreRendered']//div[contains(@class,'cb-col-scores')]//div[@class='cb-min-bat-rw']//h2")).getText();
