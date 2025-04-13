@@ -35,7 +35,7 @@ public class SendMailScore {
 		System.setProperty("webdriver", "chromedriver.exe");
 		
         ChromeOptions options = new ChromeOptions();
-//      options.addArguments("--headless");
+     options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
 	      driver.manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
 	      driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);	 
