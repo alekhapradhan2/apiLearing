@@ -27,7 +27,6 @@ public class SendMailScore {
 
 	
 	String url="https://m.cricbuzz.com/live-cricket-scores/115140/dc-vs-mi-29th-match-indian-premier-league-2025";
-
 	@Test
 	public void getTheScore() throws InterruptedException {
 		
