@@ -26,7 +26,7 @@ import jakarta.mail.internet.MimeMessage;
 public class SendMailScore {
 
 	
-	String url="https://cricbuzz.com/live-cricket-scores/115248/kkr-vs-pbks-44th-match-indian-premier-league-2025";
+	String url="https://cricbuzz.com/live-cricket-scores/115302/rcb-vs-csk-52nd-match-indian-premier-league-2025";
 	@Test
 	public void getTheScore() throws InterruptedException {
 		
@@ -331,7 +331,7 @@ public class SendMailScore {
 	    try {
 	        Message message = new MimeMessage(session);
 	        message.setFrom(new InternetAddress("alekhpradhan18@gmail.com"));
-	        String[] id = {"manupradhan7887@gmail.com", "alekhpradhan18@gmail.com","sibap2757@gmail.com"};
+	        String[] id = {"manupradhan7887@gmail.com", "alekhpradhan18@gmail.com"};
 	        InternetAddress[] recipientAddresses = new InternetAddress[id.length];
 
 	        for (int i = 0; i < id.length; i++) {
