@@ -26,7 +26,7 @@ import jakarta.mail.internet.MimeMessage;
 public class SendMailScore {
 
 	
-	String url="https://cricbuzz.com/live-cricket-scores/115302/rcb-vs-csk-52nd-match-indian-premier-league-2025";
+	String url="https://cricbuzz.com/live-cricket-scores/118907/pbks-vs-rcb-qualifier-1-indian-premier-league-2025";
 	@Test
 	public void getTheScore() throws InterruptedException {
 		
