@@ -331,7 +331,7 @@ public class SendMailScore {
 	    try {
 	        Message message = new MimeMessage(session);
 	        message.setFrom(new InternetAddress("alekhpradhan18@gmail.com"));
-	        String[] id = {"manupradhan7887@gmail.com", "alekhpradhan18@gmail.com"};
+	        String[] id = {"manupradhan7887@gmail.com"};
 	        InternetAddress[] recipientAddresses = new InternetAddress[id.length];
 
 	        for (int i = 0; i < id.length; i++) {
